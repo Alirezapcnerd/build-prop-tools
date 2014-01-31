@@ -170,19 +170,6 @@ public class BuildProp{
 		}catch(IOException e){
 			e.printStackTrace();
 		}
-
-		Process p = null;
-		try{
-			List<String> command = new ArrayList<String>();
-			command.add("/system/bin/setprop");
-			command.add(key);
-			command.add(value);
-			p = new ProcessBuilder(command).redirectErrorStream(true).start();
-			p.destroy();
-		}catch(IOException e){
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	/**
